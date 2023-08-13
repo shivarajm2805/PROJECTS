@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crop recommendation System</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+    <style>
+        body{
+        background-image:url(static/feild.jpg);
+        background-size:cover
+        }
+    </style>
+</head>
+<body>
+<header class="bg-success text-white text-center" style="padding:40px;font-size:20px;">
+    ML based crop recommendation system
+</header>
+
+<form action='/' method="post">
+   <table class="table">
+
+
+       <tr>
+           <td>
+               <input type="text" name="n" placeholder="Nitrogen" required/>
+           </td>
+       </tr>
+
+       <tr>
+           <td>
+               <input type="text" name="p" placeholder="Phosprous" required/>
+           </td>
+       </tr>
+
+       <tr>
+           <td>
+               <input type="text" name="k" placeholder="potasium" required/>
+           </td>
+       </tr>
+
+       <tr>
+           <td>
+               <input type="text" name="temp" placeholder="Tempearture" required  />
+           </td>
+       </tr>
+
+       <tr>
+           <td>
+               <input type="text" name="hum" placeholder="Humidity" required/>
+           </td>
+       </tr>
+
+              <tr>
+           <td>
+               <input type="text" name="ph" placeholder="Ph" required/>
+           </td>
+       </tr>
+
+       <tr>
+           <td>
+               <input type="text" name="rain" placeholder="Rain fall" required/>
+           </td>
+       </tr>
+
+       <tr>
+           <td>
+               <input type="submit" value="predict" class="btn btn-primary" />
+           </td>
+       </tr>
+
+
+   </table>
+    {% if res %}
+    <h5 class="text-primary"> {{res}}</h5>
+    {% endif %}
+</form>
+
+</body>
+</html>
